@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Localizar Dispositivo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    #map {
+      margin: 20px auto;
+      width: 80%;
+      height: 400px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+    <h1>Localize seu Dispositivo</h1>
+    <form id="phoneForm">
+        <label for="phoneNumber">Digite o número de telefone:</label>
+        <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Ex: 11987654321" required>
+        <button type="submit">Verificar</button>
+        <button id="sendMessage" type="button">Enviar Mensagem via WhatsApp</button>
+      </form>
+      <div id="result" class="result" style="display: none;"></div>
+
+
+ 
+  <button onclick="getLocation()">Obter Localização</button>
+  <p id="location">Clique no botão para obter a localização.</p>
+
+
+  <div id="map"></div>
+  <script src="script.js"></script>
+</body>
+</html>
